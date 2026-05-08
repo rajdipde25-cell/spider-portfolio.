@@ -74,7 +74,7 @@ const AudioManager = () => {
 
   return (
     <div className="fixed bottom-10 left-10 z-[200] flex items-center gap-4">
-      <audio ref={audioRef} src="/music.mp3" loop />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}music.mp3`} loop />
       
       <button 
         onClick={togglePlay}
