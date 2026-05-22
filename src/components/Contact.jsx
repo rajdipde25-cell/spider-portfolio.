@@ -126,7 +126,6 @@ const ContactWebBg = () => {
 
 export default function Contact() {
   const sectionRef = useRef(null);
-  const formRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -151,12 +150,6 @@ export default function Contact() {
 
     return () => ctx.revert();
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Insert actual send behavior here later
-    alert("Thank you for reaching out! I will get back to you soon.");
-  };
 
   return (
     <section 
@@ -207,7 +200,7 @@ export default function Contact() {
             Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-white font-serif italic pr-2">Connect</span>
           </h2>
           <p className="text-gray-400 font-light text-lg tracking-wide leading-relaxed max-w-xl mx-auto">
-            Open to opportunities in e-commerce, category management, and FMCG operations. Whether you want to discuss a role, a project, or just exchange ideas—reach out.
+            Open to opportunities in marketing, customer retention, and FMCG operations. Whether you want to discuss a role, a project, or just exchange ideas—reach out.
           </p>
         </div>
 
@@ -255,73 +248,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Form Block */}
-        <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col space-y-6">
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Name Input */}
-            <div className="relative group animate-element">
-              <input 
-                type="text" 
-                id="name"
-                required
-                className="peer w-full bg-white/5 border border-white/5 text-white text-base rounded-xl px-5 py-4 outline-none transition-all duration-300 focus:bg-white/10 focus:border-red-500/50 focus:shadow-[0_0_20px_rgba(239,68,68,0.2)] placeholder-transparent"
-                placeholder="Name"
-              />
-              <label htmlFor="name" className="absolute left-5 top-4 text-gray-500 text-base pointer-events-none transition-all duration-300 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-red-400 peer-valid:-top-3 peer-valid:text-xs peer-valid:text-gray-400 bg-[#030303] px-1 rounded">
-                Name
-              </label>
-            </div>
-            
-            {/* Email Input */}
-            <div className="relative group animate-element">
-              <input 
-                type="email" 
-                id="email"
-                required
-                className="peer w-full bg-white/5 border border-white/5 text-white text-base rounded-xl px-5 py-4 outline-none transition-all duration-300 focus:bg-white/10 focus:border-red-500/50 focus:shadow-[0_0_20px_rgba(239,68,68,0.2)] placeholder-transparent"
-                placeholder="Email"
-              />
-              <label htmlFor="email" className="absolute left-5 top-4 text-gray-500 text-base pointer-events-none transition-all duration-300 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-red-400 peer-valid:-top-3 peer-valid:text-xs peer-valid:text-gray-400 bg-[#030303] px-1 rounded">
-                Email
-              </label>
-            </div>
-          </div>
-
-          {/* Message Textarea */}
-          <div className="relative group animate-element">
-            <textarea 
-              id="message"
-              required
-              rows="5"
-              className="peer w-full bg-white/5 border border-white/5 text-white text-base rounded-xl px-5 py-4 outline-none transition-all duration-300 focus:bg-white/10 focus:border-red-500/50 focus:shadow-[0_0_20px_rgba(239,68,68,0.2)] placeholder-transparent resize-none"
-              placeholder="Message"
-            ></textarea>
-            <label htmlFor="message" className="absolute left-5 top-4 text-gray-500 text-base pointer-events-none transition-all duration-300 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-red-400 peer-valid:-top-3 peer-valid:text-xs peer-valid:text-gray-400 bg-[#030303] px-1 rounded">
-              Message
-            </label>
-          </div>
-
-          {/* Submit Button */}
-          <div className="animate-element pt-4 flex justify-center">
-            <button 
-              type="submit" 
-              className="relative group overflow-hidden rounded-full w-full md:w-auto px-12 py-4 border border-red-500/30 bg-black text-white text-sm uppercase tracking-[0.2em] font-medium transition-all duration-500 hover:scale-[1.02] hover:border-red-500 shadow-[0_0_0_rgba(239,68,68,0)] hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]"
-            >
-              {/* Animated Inner Sweep */}
-              <span className="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-600/20 to-red-600/0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-              
-              <span className="relative z-10 flex items-center justify-center space-x-3">
-                <span>Send Message</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 text-red-500">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-              </span>
-            </button>
-          </div>
-          
-        </form>
       </div>
 
       {/* Tailwind config hack config for custom shimmer keyframe. A real project injects this in index.css or tailwind.config.js - we can shim it inline cleanly here */}

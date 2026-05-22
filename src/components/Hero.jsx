@@ -368,18 +368,18 @@ export default function Hero() {
             <div className="flex-1 max-w-lg lg:max-w-xl text-left">
               <div className="relative inline-block mb-6">
                 <p className="text-sm md:text-base text-red-500 font-bold tracking-[0.4em] uppercase opacity-90 drop-shadow-[0_0_10px_rgba(239,68,68,0.5)] animate-pulse">
-                  Hey, I'm Rajdip
+                  I Study Consumers. I Solve Commerce Problems.
                 </p>
                 <div className="absolute -inset-1 bg-red-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-[4.5rem] font-bold tracking-tighter drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] leading-[1] font-sans">
-                E-Commerce &<br />
+                Marketing &<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-gray-400 font-serif italic font-light pr-4 relative">
-                  Category
+                  Customer
                   <span className="absolute bottom-2 left-0 w-full h-[1px] bg-red-500/30 blur-[1px]" />
                 </span><br />
-                Professional
+                Retention
               </h1>
             </div>
 
@@ -388,7 +388,7 @@ export default function Hero() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2 group-hover/box:bg-red-600/10 transition-colors duration-700" />
               
               <p className="max-w-[28rem] text-base md:text-lg text-gray-300 drop-shadow-xl font-light tracking-wide leading-relaxed mb-10 relative z-10">
-                I drive measurable category outcomes through data-driven catalogue operations, assortment planning, and cross-functional execution. PGDM at IMI Kolkata.
+                Exploring consumer behaviour, commerce systems, and market strategy through real-world projects and field research. PGDM at IMI Kolkata.
               </p>
 
               <a href="#contact" className="pointer-events-auto px-10 py-5 rounded-full border border-red-500/40 text-white text-sm tracking-[0.3em] uppercase font-bold hover:border-red-500 transition-all duration-500 backdrop-blur-sm shadow-[0_0_20px_rgba(239,68,68,0.1)] hover:shadow-[0_0_40px_rgba(239,68,68,0.3)] inline-block relative overflow-hidden group/btn">

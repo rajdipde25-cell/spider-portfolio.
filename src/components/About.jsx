@@ -6,21 +6,24 @@ import rajdipPhoto from '../assets/rajdip.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 const SKILLS = [
-  'Catalogue Management & Auditing',
-  'Assortment Planning',
-  'Conversion Rate Optimisation',
-  'SKU Analysis & Pricing Strategy',
-  'Competitor Benchmarking',
-  'Advanced Excel & Power BI',
-  'Vendor Coordination',
-  'Cross-functional Collaboration'
+  'Consumer Insights & Research',
+  'Quick Commerce Operations',
+  'Retail Distribution Strategy',
+  'Retention & TAT Optimization',
+  'Category Diagnostics',
+  'SKU-Level Pricing Architecture',
+  'Trade Channel Optimization',
+  'Advanced Excel & Power BI'
 ];
 
 const EDUCATION = [
-  { degree: 'PGDM', school: 'International Management Institute Kolkata', year: '2025 – 2027', detail: 'Pursuing' },
-  { degree: 'BBA (Honours)', school: 'Cooch Behar College', year: '2022 – 2025', detail: '86.44%' },
-  { degree: 'Class XII', school: 'Dewanhat High School', year: '2021', detail: '87.00%' },
-  { degree: 'Class X', school: 'Jenkins School', year: '2019', detail: '86.14%' }
+  { degree: 'PGDM (Marketing)', school: 'IMI Kolkata', year: '2025 – 2027', detail: 'S.M.A.R.T Cell: Branding & Media' },
+  { degree: 'BBA', school: 'Cooch Behar College', year: '2022 – 2025', detail: '86.44% Aggregate' }
+];
+
+const CERTIFICATIONS = [
+  { name: 'IBM Product Manager Certificate', issuer: 'IBM / Coursera', date: 'May 2026' },
+  { name: 'Global Impact: Business Ethics', issuer: 'UIUC', date: 'Nov 2025' }
 ];
 
 export default function About() {
@@ -29,12 +32,10 @@ export default function About() {
   const textContainerRef = useRef(null);
   const imageContainerRef = useRef(null);
   const photoRef = useRef(null);
-  const webLeftRef = useRef(null);
-  const webRightRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // 1. Entrance 3D Transition Animation (No webs)
+      // 1. Entrance 3D Transition
       const tlEntrance = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -61,7 +62,7 @@ export default function About() {
         }
       );
 
-      // 2. Existing content reveal
+      // 2. Content reveal
       const tlContent = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -79,7 +80,7 @@ export default function About() {
       )
       .fromTo(textElements,
         { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: 'power3.out' },
+        { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: 'power3.out' },
         '-=0.8'
       );
     }, sectionRef);
@@ -159,7 +160,6 @@ export default function About() {
               className="w-full h-auto object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            {/* Soft overlay decoration (no webs) */}
             <div className="absolute inset-0 pointer-events-none opacity-10" style={{
               backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)',
               backgroundSize: '30px 30px'
@@ -168,7 +168,7 @@ export default function About() {
         </div>
 
         {/* Right Column: Story & Details */}
-        <div ref={textContainerRef} className="flex flex-col justify-center space-y-10">
+        <div ref={textContainerRef} className="flex flex-col justify-center space-y-8">
 
           <div className="overflow-hidden">
             <h2 className="stagger-reveal text-5xl md:text-6xl font-bold tracking-tighter text-white font-sans leading-tight">
@@ -179,26 +179,39 @@ export default function About() {
 
           <div className="overflow-hidden">
             <p className="stagger-reveal text-lg md:text-xl text-gray-400 font-light leading-relaxed max-w-xl">
-              E-Commerce and Category Management professional with hands-on experience in catalogue operations, assortment planning, SKU-level performance analysis, and conversion rate optimisation. Skilled in competitor benchmarking, pricing strategy, product discoverability, and vendor coordination. Proven track record of driving measurable category outcomes through data-driven, cross-functional delivery.
+              I am a marketing and customer retention professional driven by field-validated research and operational execution. From auditing 150+ retail outlets to slashing resolution TAT from 24 hours to 15 minutes, my work bridges the gap between raw market data and scalable commercial decisions. 
+            </p>
+            <p className="stagger-reveal text-base text-gray-500 font-light leading-relaxed max-w-xl mt-4">
+              Currently pursuing my PGDM at IMI Kolkata, I focus on how consumer insights drive quick commerce operations and retail distribution architecture. I don’t just watch the market—I diagnose it to solve retention and distribution problems.
             </p>
           </div>
 
-          {/* Education */}
+          {/* Education & Certifications */}
           <div className="overflow-hidden">
-            <div className="stagger-reveal space-y-4 pt-4 border-t border-white/10 max-w-xl">
-              <h3 className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">Education</h3>
-              {EDUCATION.map((edu, i) => (
-                <div key={i} className="flex items-start justify-between group">
-                  <div>
-                    <p className="text-white font-medium">{edu.degree}</p>
-                    <p className="text-gray-400 text-sm">{edu.school}</p>
+            <div className="stagger-reveal grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 border-t border-white/10 max-w-xl">
+              <div className="space-y-4">
+                <h3 className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">Education</h3>
+                {EDUCATION.map((edu, i) => (
+                  <div key={i} className="group">
+                    <p className="text-white font-medium text-sm">{edu.degree}</p>
+                    <p className="text-gray-400 text-[12px]">{edu.school}</p>
+                    <div className="flex justify-between mt-1">
+                      <p className="text-red-400 text-[11px] italic">{edu.detail}</p>
+                      <p className="text-gray-500 text-[11px]">{edu.year}</p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-gray-300 text-sm">{edu.year}</p>
-                    <p className="text-red-400 text-xs">{edu.detail}</p>
+                ))}
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">Certifications</h3>
+                {CERTIFICATIONS.map((cert, i) => (
+                  <div key={i} className="group">
+                    <p className="text-white font-medium text-sm">{cert.name}</p>
+                    <p className="text-gray-400 text-[12px]">{cert.issuer}</p>
+                    <p className="text-gray-500 text-[11px] mt-1">{cert.date}</p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
@@ -208,7 +221,7 @@ export default function About() {
               {SKILLS.map((skill, i) => (
                 <div key={i} className="flex items-center space-x-3 group">
                   <div className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-red-500 transition-colors duration-300" />
-                  <span className="text-gray-300 text-sm md:text-base font-medium tracking-wide group-hover:text-white transition-colors duration-300">
+                  <span className="text-gray-300 text-[13px] md:text-sm font-medium tracking-wide group-hover:text-white transition-colors duration-300">
                     {skill}
                   </span>
                 </div>
@@ -217,9 +230,9 @@ export default function About() {
           </div>
 
           {/* Quote Block */}
-          <div className="overflow-hidden mt-6">
+          <div className="overflow-hidden mt-2">
             <blockquote className="stagger-reveal border-l-2 border-red-500/50 pl-6 py-2">
-              <p className="text-xl md:text-2xl text-gray-200 font-serif italic">
+              <p className="text-lg md:text-xl text-gray-200 font-serif italic">
                 "Execution builds the foundation. <br /> Data drives the decisions."
               </p>
             </blockquote>

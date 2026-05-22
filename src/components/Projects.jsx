@@ -7,51 +7,42 @@ gsap.registerPlugin(ScrollTrigger);
 const EXPERIENCES = [
   {
     id: '01',
-    name: "Spencer's Retail — E-Commerce Intern",
-    description: 'Led end-to-end catalogue operations including content accuracy auditing, product taxonomy mapping, and fulfilment issue resolution. Executed competitor benchmarking and assortment gap analysis; identified and corrected 50+ underperforming SKU listings to improve organic discoverability.',
-    tech: ['Catalogue Ops', 'Assortment Planning', 'Competitor Benchmarking', 'SKU Analysis'],
+    name: "Spencer's Retail (Jiffy) — E-Commerce & Retention Intern",
+    description: 'Drove complaint rate from 8–12% to below 2% and slashed resolution TAT from 24+ hours to <15 mins. Contributed to ~20% MoM growth and boosted retention to 40–50% (surpassing industry average of 30–40%) through targeted interventions and last-mile process fixes.',
+    tech: ['Quick Commerce', 'Retention Systems', 'TAT Optimisation', 'Pricing Strategy'],
     link: '#',
-    period: 'Oct 2025 – Present',
-    result: '30% increase in conversion rate'
+    period: 'Oct 2025 – Apr 2026',
+    result: '40-50% Retention, 20% MoM Growth'
   },
   {
     id: '02',
-    name: 'Bajaj Consumer Care — Sales & Distribution Analyst',
-    description: 'Mapped SKU availability, pricing gaps, and distributor execution across 7+ regions and 180+ retail outlets. Proposed a Rs.10–20 rural pack strategy to improve last-mile penetration. Delivered margin and credit-term analysis supporting trade channel optimisation.',
-    tech: ['Sales Analysis', 'Pricing Strategy', 'Distribution Mapping', 'Trade Marketing'],
+    name: 'Bajaj Consumer Care — Market Research Intern',
+    description: 'Audited 150+ retail outlets across 7 clusters; mapped SKU presence, shelf share, and pricing architecture. Identified a 3x+ distribution deficit in core urban clusters and delivered channel strategy recommendations for entry-price SKUs and retailer credit terms.',
+    tech: ['Market Research', 'Retail Distribution', 'SKU Analysis', 'Channel Strategy'],
     link: '#',
-    period: 'Sep – Oct 2025',
-    result: '180+ outlets audited across 7 regions'
+    period: 'Oct 2025',
+    result: '150+ outlets audited, 3x+ gap identified'
   },
   {
     id: '03',
-    name: 'Spencer\'s Jiffy — Post-Purchase Experience & CX Operations',
-    description: 'As Program Management Trainee, owned post-purchase SLA reduction from 24+ hours to under 1 hour through tiered resolution framework design. Built competitive intelligence framework benchmarking against Blinkit, Zepto, and Swiggy Instamart across 7 Kolkata delivery clusters.',
-    tech: ['CX Operations', 'SLA Framework', 'Process Mapping', 'Competitive Intelligence'],
+    name: 'Diverse Genomics — Brand & Communication Intern',
+    description: 'Developed audience-segmented communication strategies for health awareness campaigns. Executed multi-platform digital campaigns, managing content pipelines, scheduling, and audience engagement tracking to bridge awareness gaps.',
+    tech: ['Brand Messaging', 'Campaign Execution', 'Audience Segmentation', 'Digital Strategy'],
     link: '#',
-    period: 'SIP 2025–26',
-    result: '95%+ SLA improvement'
+    period: 'Sep 2025 – Feb 2026',
+    result: 'Multi-platform campaign execution'
   },
   {
     id: '04',
-    name: 'Diverse Genomics — Campaign Execution & Outreach',
-    description: 'Planned and executed performance-tracked digital campaigns on LinkedIn and Instagram. Achieved 60% higher reach and engaged 400+ students through targeted content and stakeholder coordination.',
-    tech: ['Digital Marketing', 'LinkedIn Campaigns', 'Content Strategy', 'Stakeholder Coordination'],
+    name: 'SVP India (NGO Diksha) — Outreach Intern',
+    description: 'Led on-ground education and outreach for underserved women and children in Kolkata. Managed field coordination, stakeholder reporting, and programme execution over a 7-month period.',
+    tech: ['Field Coordination', 'Community Outreach', 'Stakeholder Management', 'NGO Ops'],
     link: '#',
-    period: 'Jun 2025 – Feb 2026',
-    result: '60% higher reach, 400+ students engaged'
+    period: 'Jul 2025 – Jan 2026',
+    result: '7-month field leadership'
   },
   {
     id: '05',
-    name: 'DIKSHA — Field Operations Lead (Volunteer)',
-    description: 'Managed 20+ volunteers and on-ground operations; enabled outreach to 170+ children and women across underserved communities. Coordinated education and health programs in flexible commitment alongside academic schedule.',
-    tech: ['Operations Management', 'Volunteer Coordination', 'Community Outreach', 'Event Planning'],
-    link: '#',
-    period: 'Jul 2025 – Jan 2026',
-    result: '170+ children and women reached'
-  },
-  {
-    id: '06',
     name: 'Harvard Business Publishing Simulation',
     description: 'Secured 1st place in a Harvard Business Publishing simulation by applying structured decision-making, supply chain trade-off analysis, and execution sequencing to drive market share growth.',
     tech: ['Strategic Decision Making', 'Supply Chain Analysis', 'Go-to-Market Strategy', 'Simulation'],

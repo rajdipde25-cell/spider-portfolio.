@@ -144,7 +144,7 @@ export default function Navbar() {
                 Rajdip
               </span>
               <span className="text-red-500 font-mono text-[8px] uppercase tracking-[0.3em] mt-1 opacity-80">
-                Spider-Category
+                Spider-Commerce
               </span>
             </div>
           </div>
